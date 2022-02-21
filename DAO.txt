@@ -1,0 +1,88 @@
+-UtenteDAO
+	->Utente getByEmail (String email) 
+		->restituisce l'entità utente che la mail specificata
+	->updateUtente (Utente utente)
+		->aggiorna l'utente nel db
+	->Utente getByPrimaryKey(int primaryKey)
+
+
+
+-PazienteDAO
+	->Paziente getByPrimaryKey(Integer primaryKey)   
+		->ritorna l'entità paziente con tutti i suoi campi completi (tranne ultima visita/prescrizione), email e medico (solo info essenziali)
+	->List<Medico> getByProvincia(Paziente paziente_corrente)
+		->ritorna la lista dei medici della provincia del paziente_corrente tranne il medico con il codice fiscale del paziente_corrente (se c'è)
+	->Visita getVisitaByPrimaryKey(int primaryKey)
+		->ritorna la visita con la primaryKey data
+	->List<Visita> getAllVisiteByPaziente(Paziente p)
+		->ritorna tutte le visite del paziente p ordinate prima per quelle non eseguite
+    	->List<Visita> getEVisiteByPaziente(Paziente p) 
+    		->ritorna tutte le visite già fatte di p
+    	->List<Visita> getNEVisiteByPaziente(Paziente p) 
+		->ritorna tutte le visite di p non ancora fatte
+	->List<Esame> getAllEsamiByPaziente(Paziente p)
+		->ritorna tutti gli esami (fatti e non ) del paziente p
+	->Esame getEsameByPrimaryKey(int primaryKey) 
+		->ritorna l'esame con la primaryKet specificata
+	->Ricetta getRicettaByPrimaryKey(int primaryKey)
+	->List<Ricetta> getAllRicetteByPaziente(Paziente pazienteR)
+	->void cambiaMedico (int pazienteId, int medicoId) throws DAOException;
+
+
+
+-MedicoDAO
+	->Medico getByPrimaryKey(Integer primaryKey)
+		->ritorna il medico con tutti i campi completi
+	->Paziente getPazienteByPrimaryKey(Integer primaryKey)	
+		->ritorna l'entità paziente con tutti i suoi campi completi (tranne ultima visita/prescrizione), email e medico (solo info essenziali)
+	->List<Paziente> getPazientiByMedic(Medico medico)  (arraylist)
+		->ritorna una lista con tutti i pazienti del medico specificato
+	->List<Paziente> getAllPazienti(Medico medico_corrente) (arraylist)
+		->ritorna tutti i pazienti tranne il paziente con codice fiscale uguale al medico_corrente
+	->List<TipiVisita> getAllTipoVisita()
+		->ritorna la lista di tutti i tipi di visite
+	->void InserisciVisita(int paziente_id, int medico_id, int tipo_visita_id)
+		->inserisce una nuova visita con l'id del paziente, id medico di base e id tipo visita scelte
+		->aggiorna la colonna data_ultima_ricetta con la data attuale
+	->Visita getVisitaByPrimaryKey(int primaryKey)
+		->ritorna la visita con la primaryKey data
+	->void Esegui_visita(Medico medico, Visita visita, String risultati)
+		->Esegue la visita insere l'id del medico specialista, e i risultati
+	->List<Esame> getAllEsamiByPaziente(Paziente p)
+		->ritorna tutti gli esami (fatti e non ) del paziente p
+	->Esame getEsameByPrimaryKey(int primaryKey) 
+		->->ritorna l'esame con la primaryKet specificata
+	->getEEsamiByPaziente(Paziente p) throws DAOException;
+    		->ritorna tutti gli esami eseguiti
+	->getNEsamiByPaziente(Paziente p) throws DAOException;
+		->ritorna tutti gli esami non eseguiti
+	->List<TipoEsame> getAllTipiEsame
+	->void ErogaRicetta(Paziente paziente, Medico medico, Farmaco farmaco)
+	->void InserisciEsame(int paziente_id, int medico_id, int tipo_esame_id)
+	->List<Ricetta> getAllRicetteByPaziente(Paziente pazienteR)
+	->boolean checkPaziente(int paziente_id, int medico_id)
+		->controlla se il medico ha quel paziente
+
+
+	
+-SspDAO
+	->Ssp getByPrimaryKey(Integer primaryKey)
+		->ritorna l'ssp con tutti i campi
+	->Paziente getPazienteByPrimaryKey(Integer primaryKey)   
+		->ritorna l'entità paziente con tutti i suoi campi completi (tranne ultima visita/prescrizione), email e medico (solo info essenziali)
+	->List<Paziente> getPazientiByAgeRange(int min_age, int max_age) 
+		->ritorna la lista dei pazienti con età compresa tra min_age e max_age (hanno solo le info essenziali)
+	->List<Esame> getAllEsamiByPaziente(Paziente p)
+		->ritorna tutti gli esami (fatti e non ) del paziente p
+	->InserisciEsame(Paziente paziente, Medico medico, TipiEsame tipo) 
+     		->
+	->EseguiEsame(Ssp ssp, Esame esame, String risultati) 
+     		->
+	->Esame getEsameByPrimaryKey(int primaryKey) 
+		->->ritorna l'esame con la primaryKet specificata
+	->getEEsamiByPaziente(Paziente p) throws DAOException;
+    		->ritorna tutti gli esami eseguiti
+	->getNEsamiByPaziente(Paziente p) throws DAOException;
+		->ritorna tutti gli esami non eseguiti
+
+

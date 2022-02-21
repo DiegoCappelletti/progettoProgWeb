@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Jan 29 17:31:45 CET 2020:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): istanza a816c00e-016f-f224-f20b-00000a219c48
+sulla directory di database C:\Programmazione\progetto_web\SSdb.db con caricatore classi java.net.URLClassLoader@2f13fa2c 
+Caricato da file:C:/Users/diego/.dbvis/jdbc/Apache Derby 10.15.1.3/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.2+9-LTS
+user.dir=C:\Programmazione\progetto_web
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Programma di caricamento classe database avviato - derby.database.classpath=''

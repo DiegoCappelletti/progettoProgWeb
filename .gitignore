@@ -1,0 +1,8 @@
+/ServizioSanitario/target/
+/SSbd.db/
+/sl.db/
+ServizioSanitario/target/
+SSbd.db/
+sl.db/
+*.db
+cambiamentiDB.txt

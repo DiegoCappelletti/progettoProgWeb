@@ -1,0 +1,53 @@
+.navbar {
+    min-height: 42px;
+    border-radius: 0;
+    background-color: #1c4bce;
+    width: 100%;
+}
+
+.navbar .nav-item {
+    margin: 0px 5px;
+}
+
+.navbar a {
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.navbar .nav-item a:hover {
+    color: #1c4bce;
+    background-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.jumbotron {
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 110, 255, 0.2);
+    border-radius: 0;
+    color: #ffffff;
+    text-shadow: .5px .5px #000000;
+    padding: 32px;
+}
+
+.jumbotron h1 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.jumbotron p {
+    font-weight: 600;
+}
+
+.jumbotron .btn {
+    background-color: #1c4bce;
+}
+
+footer, footer a {
+    background-color: #1c4bce;
+    color: #ffffff;
+}

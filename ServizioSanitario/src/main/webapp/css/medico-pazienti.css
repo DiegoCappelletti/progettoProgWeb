@@ -1,0 +1,5 @@
+.patient-exams-content {
+  min-height: calc(100vh - 98px);
+  background-color: #ffffff;
+  padding: 20px;
+}

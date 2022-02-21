@@ -1,0 +1,33 @@
+.patient-info-content {
+  min-height: calc(100vh - 102px);
+  background-color: #ffffff;
+}
+
+.patient-info-content .nav-link {
+  background-color: #2c64ff;
+  color: #ffffff;
+  margin-left: 1px;
+}
+
+.patient-info-content > .nav-tabs > li > a {
+  padding-top: 0px; 
+  padding-bottom: 0px;
+}
+
+.patient-info-content .nav-tabs > li > a.active:focus, .nav-tabs > li a.active {
+  margin-top: 1px;
+}
+
+.patient-info-content .nav-tabs > li {
+  margin-bottom: 0px; 
+}
+
+.patient-info-content .nav-tabs > li a.active {
+  margin-bottom: -1px;
+  color: #1654da;
+}
+
+.patient-info-content .nav-tabs {
+  font-weight: 120;
+  font-size: 15px;
+}
